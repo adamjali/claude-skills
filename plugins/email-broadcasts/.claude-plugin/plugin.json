@@ -1,0 +1,9 @@
+{
+  "name": "email-broadcasts",
+  "description": "Draft, test, and send marketing / product-update email broadcasts to an audience via Resend — mandatory test-send and explicit confirmation before any real send, CAN-SPAM compliant, bounded history.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["email", "broadcast", "newsletter", "marketing", "resend"]
+}

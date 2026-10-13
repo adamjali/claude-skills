@@ -1,0 +1,9 @@
+{
+  "name": "jina-image-search",
+  "description": "Find and scrape web images via Jina AI (search + reader). Bring your own free JINA_API_KEY; Reader also works keyless.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["images", "image-search", "scraping", "jina", "stock-photos"]
+}

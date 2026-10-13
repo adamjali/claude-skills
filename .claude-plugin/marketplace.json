@@ -1,0 +1,89 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "adamjali",
+  "description": "Practical Claude Code skills: deep-dive research & teardowns, web build/deploy, image search, repo audit, disk cleanup, outreach, and a skill generator.",
+  "owner": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "plugins": [
+    {
+      "name": "explain",
+      "source": "./plugins/explain",
+      "description": "Deep-dive explanation & competitor/product teardown — parallel research, browser recon, reverse-engineer calculators to validated code.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["research", "teardown", "competitor-analysis", "reverse-engineering", "explain"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "jina-image-search",
+      "source": "./plugins/jina-image-search",
+      "description": "Find and scrape web images via Jina AI (search + reader). Bring your own free JINA_API_KEY; Reader also works keyless.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["images", "image-search", "scraping", "jina", "stock-photos"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "site-forge",
+      "source": "./plugins/site-forge",
+      "description": "Build a distinctive, production-grade website (and optional Remotion promo video) for any business, product, or person, then deploy it free.",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["website", "web-design", "landing-page", "remotion", "deploy"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "disk-cleanup",
+      "source": "./plugins/disk-cleanup",
+      "description": "Free up disk space on macOS safely — regenerable caches, old runtimes, and bulky artifacts with a green/yellow/red preview gate that never touches credentials or active code.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["disk", "cleanup", "macos", "storage", "cache"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "site-prospector",
+      "source": "./plugins/site-prospector",
+      "description": "Find local businesses worth pitching a free demo website, verify the facts, build & deploy via site-forge, and draft tailored outreach — logged to a bounded ledger.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["leads", "prospecting", "local-business", "outreach", "web-design"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "github-audit",
+      "source": "./plugins/github-audit",
+      "description": "Audit GitHub repo health (security, CI/CD, branch protection, dependencies, community), auto-fix safe issues behind saved policies, run quality gates, and ship behind a confirmation gate.",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["github", "audit", "ci-cd", "dependabot", "security"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "skill-maker",
+      "source": "./plugins/skill-maker",
+      "description": "Create new Claude Code skills or slash-commands in a clean, consistent house style — XML phases, state files, saved rules, checkpoint resumption, and 14 compaction patterns.",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["skills", "skill-creator", "claude-code", "scaffolding", "meta"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "cold-outreach",
+      "source": "./plugins/cold-outreach",
+      "description": "Research a prospect, evaluate fit, draft a personalized cold email, preview it to yourself, send via Resend, and track it in a bounded ledger. Config-driven across industries.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["cold-email", "outreach", "sales", "prospecting", "resend"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    },
+    {
+      "name": "email-broadcasts",
+      "source": "./plugins/email-broadcasts",
+      "description": "Draft, test, and send marketing / product-update email broadcasts to an audience via Resend — mandatory test-send and explicit confirmation, CAN-SPAM compliant, bounded history.",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["email", "broadcast", "newsletter", "marketing", "resend"],
+      "homepage": "https://github.com/adamjali/claude-skills"
+    }
+  ]
+}

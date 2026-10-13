@@ -1,0 +1,17 @@
+Subject: {{SUBJECT}}
+From: {{FROM}}
+
+---
+
+Hi {{FIRST_NAME|there}},
+
+I'm {{SENDER_NAME}} — I came across {{PROSPECT_SPECIFIC_THING}}. {{ONE_LINER}}
+
+{{SHORT_RELEVANCE_SENTENCE}}
+
+It's quick to try — you can take a look at {{PRODUCT_URL}}.
+
+Would love your thoughts.
+
+— {{SENDER_NAME}}
+{{SENDER_TITLE}}

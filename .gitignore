@@ -1,0 +1,16 @@
+# Secrets / local env
+.env
+.env.*
+*.local
+secrets.*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+
+# Build / cache
+node_modules/
+__pycache__/
+*.pyc
+*.log

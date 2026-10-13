@@ -1,0 +1,9 @@
+{
+  "name": "cold-outreach",
+  "description": "Research a prospect, evaluate fit, draft a personalized cold email, preview it to yourself, send via Resend, and track it in a bounded ledger. Config-driven across industries.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["cold-email", "outreach", "sales", "prospecting", "resend"]
+}

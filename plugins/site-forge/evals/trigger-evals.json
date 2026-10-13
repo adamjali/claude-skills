@@ -1,0 +1,23 @@
+[
+  {"query": "my buddy runs an HVAC company in the metro and his site is basically a facebook page, can you whip up a slick landing page to show him what's possible", "should_trigger": true},
+  {"query": "build me a one-page site for a coffee roaster, dark moody aesthetic, with a scroll animation on the hero", "should_trigger": true},
+  {"query": "i need a demo site for a local landscaping business to pitch them, fast, just do it yourself and deploy it", "should_trigger": true},
+  {"query": "make a portfolio site for me, i'm a freelance photographer, something jaw-dropping and memorable", "should_trigger": true},
+  {"query": "can you mock up a website for joe's plumbing — they don't have one — and put it somewhere free", "should_trigger": true},
+  {"query": "design a landing page for my app launch with a promo video and some interactive bits", "should_trigger": true},
+  {"query": "throw together a high-end site for a food truck, take care of the images yourself, i don't want to be asked a bunch of stuff", "should_trigger": true},
+  {"query": "i want the absolute best site for a wedding venue, i'm happy to generate images in gemini if you tell me exactly what to make", "should_trigger": true},
+  {"query": "spec site for a roofing company i'm trying to land as a client, has to look award-winning", "should_trigger": true},
+  {"query": "build a clean single page for a dentist office — modern, mobile, with a contact form that emails me the leads", "should_trigger": true},
+
+  {"query": "my netlify deploy is failing with a build error on my next.js app, help me debug it", "should_trigger": false},
+  {"query": "review the accessibility of my existing react dashboard and fix the contrast issues", "should_trigger": false},
+  {"query": "write me a cold email to pitch my web design services to a roofer i found", "should_trigger": false},
+  {"query": "find me 10 local businesses near me that don't have websites", "should_trigger": false},
+  {"query": "convert this figma file into react components for our design system", "should_trigger": false},
+  {"query": "help me set up a custom domain and SSL on my existing wordpress site", "should_trigger": false},
+  {"query": "what's a good color palette and font pairing for a fintech brand?", "should_trigger": false},
+  {"query": "add a dark mode toggle to my existing portfolio site", "should_trigger": false},
+  {"query": "make me a powerpoint pitch deck for investors", "should_trigger": false},
+  {"query": "render a 3d product turntable animation in blender", "should_trigger": false}
+]

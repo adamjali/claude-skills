@@ -1,0 +1,9 @@
+{
+  "name": "site-prospector",
+  "description": "Find local businesses worth pitching a free demo website to, verify the facts, build & deploy via site-forge, and draft tailored outreach — all logged to a bounded ledger.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["leads", "prospecting", "local-business", "outreach", "web-design"]
+}

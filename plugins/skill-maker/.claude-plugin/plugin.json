@@ -1,0 +1,9 @@
+{
+  "name": "skill-maker",
+  "description": "Create new Claude Code skills or slash-commands in a clean, consistent house style — XML phases, state files, saved rules, checkpoint resumption, and 14 compaction patterns. Structured intake -> generate -> validate.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["skills", "skill-creator", "claude-code", "scaffolding", "meta"]
+}

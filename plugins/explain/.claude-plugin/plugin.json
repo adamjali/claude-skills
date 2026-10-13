@@ -1,0 +1,9 @@
+{
+  "name": "explain",
+  "description": "Deep-dive explanation & competitor/product teardown for repos, websites, concepts, and live products. Parallel research, browser recon, and reverse-engineering calculators to validated code.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["research", "teardown", "explain", "reverse-engineering", "competitor-analysis"]
+}

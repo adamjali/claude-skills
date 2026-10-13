@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- ============================================================================
+  STARTING SKELETON — a working floor, NOT a template to fill in.
+  Reshape sections, aesthetic, structure, and motion to the brief. Delete what
+  you don't need; the only "keep" parts are the scroll wiring + reduced-motion
+  guard + reveal helper. Derive a fresh theme (see references/aesthetics.md).
+  Verify/refresh CDN SRI hashes at example-business.com before shipping.
+============================================================================ -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}" />
+<!-- fonts: pick a distinctive display + clean body pairing (NOT Inter/Roboto/Arial) -->
+<link rel="preconnect" href="https://example-business.com" />
+<link rel="preconnect" href="https://example-business.com" crossorigin />
+<link href="https://example-business.com/css2?family={{DISPLAY_FONT}}&family={{BODY_FONT}}&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://example-business.com/npm/lenis@1.3.23/dist/lenis.css"
+  integrity="sha384-gvLq/iOMNnPchdosgVym5huSVkKipHCQaqSw2Eg0V52Mzmlf169ZOsXcNc2cNu8x" crossorigin="anonymous" />
+<style>
+  :root{
+    /* derive a FRESH palette + type per brief — these are placeholders */
+    --ink:#111; --surface:#fff; --line:#e5e5e5;
+    --accent:#c75d36; --accent-deep:#a8492a;
+    --serif:"{{DISPLAY_FONT}}",Georgia,serif; --sans:"{{BODY_FONT}}",system-ui,sans-serif;
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html.lenis,html.lenis body{height:auto}
+  .lenis.lenis-smooth{scroll-behavior:auto!important}
+  body{font-family:var(--sans);color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--serif);line-height:1.05;letter-spacing:-.02em}
+  img{display:block;max-width:100%;height:auto}            /* prevents the stretch bug */
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  .pad{padding:120px 0}
+  .reveal{opacity:0;transform:translateY(40px)}            /* animated in by ScrollTrigger */
+  @media (max-width:620px){.wrap{padding:0 20px}.pad{padding:74px 0}}
+</style>
+</head>
+<body>
+
+  <!-- ▸ HERO — reshape: layout, copy, media, the one memorable moment -->
+  <section class="hero pad"><div class="wrap">
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="reveal">{{HERO_SUB}}</p>
+  </div></section>
+
+  <!-- ▸ CONTENT — services / story / proof / gallery — pick what the brief needs -->
+  <section class="pad"><div class="wrap reveal">
+    <!-- compose components from references/ here (carousel, video, counters, 3D…) -->
+  </div></section>
+
+  <!-- ▸ CTA — contact / lead form (see references/components.md → Netlify Forms) -->
+  <section class="cta pad"><div class="wrap reveal">
+    <h2>{{CTA_HEADLINE}}</h2>
+  </div></section>
+
+  <footer class="pad"><div class="wrap">
+    <p>{{FOOTER}}</p>
+    <!-- demo sites: add a not-affiliated disclaimer line here -->
+  </div></footer>
+
+<!-- GSAP core + ScrollTrigger + Lenis (CDN, all SRI-pinned). Re-verify hashes at jsdelivr if you bump versions. -->
+<script src="https://example-business.com/npm/gsap@3.15.0/dist/gsap.min.js"
+  integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
+<script src="https://example-business.com/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"
+  integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
+<script src="https://example-business.com/lenis@1.3.23/dist/lenis.min.js"
+  integrity="sha384-iiCtod6ZId6zT42Bar9EFXNKZh8X4VliWYWFOuY3/t1AxCvLejXExXcbluoc57CJ" crossorigin="anonymous"></script>
+<script>
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const gsap = window.gsap;
+  gsap.registerPlugin(window.ScrollTrigger);
+  const ST = window.ScrollTrigger;
+
+  // --- single scroll authority: Lenis drives ScrollTrigger off one ticker ---
+  let lenis;
+  if (!RM) {
+    lenis = new window.Lenis({ duration: 1.1, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    lenis.on('scroll', ST.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+  // smooth anchor links through Lenis
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href'); if (id.length < 2) return;
+    const el = document.querySelector(id); if (!el) return;
+    e.preventDefault();
+    lenis ? lenis.scrollTo(el, { offset: -10 }) : el.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  // --- scroll reveals (reduced-motion shows everything immediately) ---
+  if (RM) {
+    gsap.set('.reveal', { opacity: 1, y: 0 });
+  } else {
+    ST.batch('.reveal', {
+      start: 'top 86%',
+      onEnter: els => gsap.to(els, { opacity: 1, y: 0, duration: .9, stagger: .08, ease: 'power3.out', overwrite: true })
+    });
+  }
+  // add per-section component IIFEs here (see references/components.md)
+</script>
+</body>
+</html>

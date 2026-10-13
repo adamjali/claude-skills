@@ -1,0 +1,9 @@
+{
+  "name": "disk-cleanup",
+  "description": "Free up disk space on macOS safely — reason about regenerable caches, old runtime versions, and bulky artifacts; green/yellow/red buckets with a preview gate; never touches credentials or active code.",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["disk", "cleanup", "macos", "storage", "cache"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "site-forge",
+  "description": "Build a distinctive, production-grade website (and optional Remotion promo video) for any business, product, or person, then deploy it free. Two modes: auto (fast, autonomous) and full (best quality).",
+  "version": "0.1.0",
+  "author": { "name": "adamjali", "url": "https://github.com/adamjali" },
+  "homepage": "https://github.com/adamjali/claude-skills",
+  "license": "MIT",
+  "keywords": ["website", "web-design", "landing-page", "remotion", "deploy"]
+}
